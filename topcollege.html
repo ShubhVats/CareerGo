@@ -206,7 +206,7 @@
     <script src="assets/js/template.js"></script>
     <script type="text/javascript">
         var collegeData = [];
-        var apiUrl = 'https://careerheadstart.herokuapp.com/Datas';
+        var apiUrl = 'https://careerheadstart.herokuapp.com/Colleges';
         fetch(apiUrl).then(response => {
             return response.json();
         }).then(data => {
@@ -219,14 +219,14 @@
             for (i = 0; i < collegeData.length; i++) {
                 main +=
                     `<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<a class="thumbnail" href="https://www.jnu.ac.in/main/">
+						<a class="thumbnail" href=` + collegeData[i].CollegeWebsite + `>
 							<span class="img">
-								<img src="assets/images/jnu.jpg" alt=""/>
+								<img src=` + collegeData[i].CollegeImg + ` alt=""/>
 								<span class="cover"><span class="more">See details &rarr;</span></span>
 							</span>
-							<span class="title">` + collegeData[i].Address + `</span>
+							<span class="title">` + collegeData[i].CollegeName + `</span>
 						</a>
-						<span class="details"><a href="https://www.jnu.ac.in/main/">Visit Website</a> </span>
+						<span class="details"><a href=` + collegeData[i].CollegeWebsite + `>Visit Website</a> </span>
 						<h4></h4>
 						<p></p>
 					</div>`

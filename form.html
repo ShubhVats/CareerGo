@@ -1,255 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
-	<title>Form | Career go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
-	<!-- Bootstrap -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<!-- Icon font -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="assets/css/styles.css">
+    <title>Form | Career go</title>
 
-	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+    <!-- Bootstrap -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <!-- Icon font -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+
+    <script>
+        function submitFunction() {
+            //   <option value="30+">30+</option>
+            //                      <option value="50+">50+</option>
+            //                      <option value="60+">60+</option>
+            //                      <option value="70+">70+</option>
+            //                      <option value="75+">75+</option>
+            //                      <option value="80+">80+</option>
+            //                      <option value="85+">85+</option>
+            //                      <option value="90+">90+</option>
+            //                      <option value="95+">95+</option>
+            var e = document.getElementById("grade");
+            var grade = e.options[e.selectedIndex].value;
+            var s = document.getElementById("stream");
+            var stream = s.options[s.selectedIndex].value;
+            var inputName = document.getElementById("inputName")
+            var inputAge = document.getElementById("inputAge")
+            var inputStream = document.getElementById("inputStream")
+            var inputStrength = document.getElementById("inputStrength")
+            var inputLoc = document.getElementById("inputLoc")
+            var inputFinancial = document.getElementById("inputFinancial")
+            var inputInterst = document.getElementById("inputInterst")
+            var inputTime = document.getElementById("inputTime")
+            var inputFeedback = document.getElementById("inputFeedback");
+
+            if (grade == "" || inputName == "" || inputAge == "" || inputStream == "" || inputStrength == "" || inputLoc == "" || inputFinancial == "" || inputInterst == "" || inputTime == "" || inputFeedback == "") {
+                alert("Please fill all the options correctly");
+            } else if (stream == "PCM") {
+                if (grade > 84) {
+                    alert("Our website says B.tech");
+                } else if (grade > 79) {
+                    alert("Our website says Bsc Maths");
+                } else if (grade > 69) {
+                    alert("Our website says Bsc Physics, Chemistry");
+                } else {
+                    alert("Divert the field to any other field");
+                }
+            } else if (stream == "PCB") {
+                if (grade > 79) {
+                    alert("MBBS");
+                } else if (grade > 74) {
+                    alert("Biotech or Nursing");
+                } else if (grade > 69) {
+                    alert("BSC");
+                } else {
+                    alert("Divert the field");
+                }
+
+            } else if (stream == "FashionDesinging&photography") {
+                alert("FashionDesinging&photography information not available")
+            } else if (stream == "Commerce") {
+                if (grade > 84) {
+                    alert("B.COM");
+                } else if (grade > 74) {
+                    alert("BBA");
+                } else if (grade > 69) {
+                    alert("Diploma");
+                } else {
+                    alert("Change the field or diploma");
+                }
+
+            } else if (stream == "Humanities") {
+                if (grade > 79) {
+                    alert("BA English Hons");
+                } else {
+                    alert("BA History")
+                }
+            } else {
+                alert("Please fill all the options correctly");
+            }
+
+        }
+    </script>
 </head>
+
 <body>
 
-<header id="header">
-	<div id="head" class="parallax" parallax-speed="1">
-		<h1 id="logo" class="text-center">
-			<img class="img-circle" src="assets/images/gg.jpg" alt="">
-			<span class="title"><p style="color:white">Career go</span></h1><p>
-			<span class="tagline"><center><p style="color:white">We provide you best college</center></span></p>
-		</h1>
-	</div>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="1">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="assets/images/gg.jpg" alt="">
+                <span class="title"><p style="color:white">Career go</span></h1>
+            <p>
+                <span class="tagline"><center><p style="color:white">We provide you best college</center></span></p>
+            </h1>
+        </div>
 
-	<nav class="navbar navbar-default navbar-sticky">
-		<div class="container-fluid">
-			
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			</div>
-			
-			<div class="navbar-collapse collapse">
-				
-				<ul class="nav navbar-nav">
-					<li><a href="home.html">Home</a></li>
-					<li><a href="topcollege.html">Top college</a></li>
-					<li><a href="upcomingexam.html">Upcoming Exam</a></li>
-					<li><a href="about.html">About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="about.html">Left Sidebar</a></li>
-							<li><a href="about.html">Right Sidebar</a></li>
-							<li><a href="single.html">Blog Post</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="blog.html">Blog</a></li>
-				</ul>
-			
-			</div><!--/.nav-collapse -->			
-		</div>	
-	</nav>
-</header>
+        <nav class="navbar navbar-default navbar-sticky">
+            <div class="container-fluid">
 
-<main id="main">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
 
-	<div class="container">
-		
-		<div class="row topspace">
-			<div class="col-sm-8 col-sm-offset-2">
-															
- 				<article class="post">
-					<header class="entry-header">
- 						<div class="entry-meta"> 
- 							<span class="posted-on"><time class="entry-date published" date="2013-06-17">Feb, 2022</time></span>			
- 						</div> 
- 						<h1 class="entry-title"><a href="form.html" rel="bookmark">Please fill the details according to the form</a></h1>
-					
+                <div class="navbar-collapse collapse">
 
-		
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="topcollege.html">Top college</a></li>
+                        <li><a href="upcomingexam.html">Upcoming Exam</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">Left Sidebar</a></li>
+                                <li><a href="about.html">Right Sidebar</a></li>
+                                <li><a href="single.html">Blog Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="blog.html">Blog</a></li>
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="container">
+
+            <div class="row topspace">
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <article class="post">
+                        <header class="entry-header">
+                            <div class="entry-meta">
+                                <span class="posted-on"><time class="entry-date published" date="2013-06-17">Apr, 2022</time></span>
+                            </div>
+                            <h1 class="entry-title"><a href="form.html" rel="bookmark">Please fill the details according to the form</a></h1>
 
 
-					<div id="respond">
-						<h5 id="reply-title">Fill details</h5>
-						<form action="" method="post" id="commentform" class="">
-							<div class="form-group">
-								<label for="inputName">Name</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
-							</div>
-                            <div class="form-group">
-								<label for="inputName">Age</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your age">
-							</div>
-                            <div class="form-group">
-								<label for="inputName">Your stream in secondary school</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your stream">
-							</div>
-                            <div class="form-group">
-								<label for="inputName">What are your school's strengths?</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your stream">
-							</div>
-                            <div class="question">
-                                <label>What type of job you want to do</label>
-                                <div class="question-answer">
-                                  <p><div>
-                                    <input type="radio" value="none" id="radio_1" name="job">
-                                    <label for="radio_1" class="radio">Private</label>
-                                  </div>
-                                  <div>
-                                    <input  type="radio" value="none" id="radio_2" name="job">
-                                    <label for="radio_2" class="radio">Government</label>
-                                  </div>
-                                  <div>
-                                    <input  type="radio" value="none" id="radio_3" name="job">
-                                    <label for="radio_3" class="radio">Business</label></p>
-                                  </div>
-                                  
-                                  </div>
-                                </div>
-                              
-                            <div class="item">
-                               <p> <b>Grade</b>
-                               <select>
+
+
+
+                            <div id="respond">
+                                <h5 id="reply-title">Fill details</h5>
+                                <form action="" method="post" id="commentform" class="" onsubmit="submitFunction()">
+                                    <div class="form-group">
+                                        <label for="inputName">Name</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Age</label>
+                                        <input type="text" class="form-control" id="inputAge" placeholder="Enter your age">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Your stream in secondary school</label>
+                                        <input type="text" class="form-control" id="inputStream" placeholder="Enter your stream">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">What are your school's strengths?</label>
+                                        <input type="text" class="form-control" id="inputStrength" placeholder="Enter your stream">
+                                    </div>
+                                    <div class="question">
+                                        <label>What type of job you want to do</label>
+                                        <div class="question-answer">
+                                            <p>
+                                                <div>
+                                                    <label for="radio_1" class="radio"><input type="radio" value="none" id="radio_1" name="job"> Private</label>
+                                                </div>
+                                                <div>
+
+                                                    <label for="radio_2" class="radio"><input type="radio" value="none" id="radio_2" name="job">Government</label>
+                                                </div>
+                                                <div>
+
+                                                    <label for="radio_3" class="radio"> <input type="radio" value="none" id="radio_3" name="job">Business</label></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <p> <b>Grade</b>
+                                            <select id="grade">
                                  <option selected value="" disabled selected></option>
-                                 <option value="1">30+</option>
-                                 <option value="2">50+</option>
-                                 <option value="3">60+</option>
-                                 <option value="4">70+</option>
-                                 <option value="5">75+</option>
-                                 <option value="6">80+</option>
-                                 <option value="7">85+</option>
-                                 <option value="8">90+</option>
-                                 <option value="8">95+</option>
+                                 <option value=30>30+</option>
+                                 <option value=50>50+</option>
+                                 <option value=60>60+</option>
+                                 <option value=70>70+</option>
+                                 <option value=75>75+</option>
+                                 <option value=80>80+</option>
+                                 <option value=85>85+</option>
+                                 <option value=90>90+</option>
+                                 <option value=95>95+</option>
                                </select>
-                             </div></p>
-                             <div class="form-group">
-								<label for="inputName">Please tell us location of your dream college</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your location">
-							</div>
-                            <div class="form-group">
-								<label for="inputName">Can you give estimate idea about your financial</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your estimate fees you can afford">
-							</div>
-                            <div class="form-group">
-								<label for="inputName">Are there extracurricular activities that match your interests?</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your extracurricular activitity">
-							</div><p>
-                            <div class="item">
-                                <label for="number">Can you give an idea about time span of your degree<span>*</span></label>
-                                <input id="number" type="number"   name="number" />
-                              </div></p>
-							
-							<div class="form-group">
-								<label for="inputComment">Any feedback you want to give</label>
-								<textarea class="form-control" rows="6"></textarea>
-							</div>
-							<div class="row">
-								<div class="col-md-8">
-									<div class="checkbox">
-										<label> <input type="checkbox"> Subscribe to updates</label>
-									</div>
-								</div>
-								<div class="col-md-4 text-right">
-  									<button type="submit" class="btn btn-action">Submit</button>
-								</div>
-						</form>
-					</div> <!-- /respond -->
-				</div>
-			</div>
-		</div> <!-- /row comments -->
-		<div class="clearfix"></div>
+                                    </div>
+                                    </p>
+                                    <div class="item">
+                                        <p> <b>Stream</b>
+                                            <select id="stream"> 
+                                 <option selected value="" disabled selected></option>
+                                 <option value="PCM">PCM</option>
+                                 <option value="PCB">PCB</option>
+                                 <option value="Commerce">Commerce</option>
+                                 <option value="FashionDesinging&photography">FashionDesinging&photography</option>
+                                 <option value="Humanities">Humanities</option>
+                               </select>
+                                    </div>
+                                    </p>
+                                    <div class="form-group">
+                                        <label for="inputName">Please tell us location of your dream college</label>
+                                        <input type="text" class="form-control" id="inputLoc" placeholder="Enter your location">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Can you give estimate idea about your financial</label>
+                                        <input type="text" class="form-control" id="inputFinancial" placeholder="Enter your estimate fees you can afford">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Are there extracurricular activities that match your interests?</label>
+                                        <input type="text" class="form-control" id="inputInterst" placeholder="Enter your extracurricular activitity">
+                                    </div>
+                                    <p>
+                                        <div class="item">
+                                            <label for="number">Can you give an idea about time span of your degree<span>*</span></label>
+                                            <input id="inputTime" type="number" min="0" name="number" />
+                                        </div>
+                                    </p>
 
-	</div>	<!-- /container -->
+                                    <div class="form-group">
+                                        <label for="inputComment">Any feedback you want to give</label>
+                                        <textarea id="inputFeedback" class="form-control" rows="6"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="checkbox">
+                                                <label> <input type="checkbox"> Subscribe to updates</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <button type="submit" class="btn btn-action">Submit</button>
+                                        </div>
 
-</main>
+                                </form>
+                                </div>
+                                <!-- /respond -->
+                            </div>
+                </div>
+            </div>
+            <!-- /row comments -->
+            <div class="clearfix"></div>
 
-<footer id="footer" class="topspace">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p>203131<br>
-						<a href="mailto:#">careergo@gmail.com</a><br>
-						<br>
-						Plot No.32-34, Knowledge Park III, Greater Noida
-					</p>	
-				</div>
-			</div>
+        </div>
+        <!-- /container -->
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Follow me</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href=""><i class="fa fa-twitter fa-2"></i></a>
-						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-						<a href=""><i class="fa fa-github fa-2"></i></a>
-						<a href=""><i class="fa fa-facebook fa-2"></i></a>
-					</p>
-				</div>
-			</div>
+    </main>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">A little about us</h3>
-				<div class="widget-body">
-					<p>Career go provide a platform in which student itself decide what he or she want to do. It give you the best options list of colleges and their ranking, so student can select their college by their own interest. It's vital for a personal to find out the way to manage ones career management skills; because it has been stated that career could be a lifelong objective, a career should never come to a halt and student should know what things or course excites and directly search his or her dream college.</p>
-					
-				</div>
-			</div>
+    <footer id="footer" class="topspace">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Contact</h3>
+                    <div class="widget-body">
+                        <p>203131<br>
+                            <a href="mailto:#">careergo@gmail.com</a><br>
+                            <br> Plot No.32-34, Knowledge Park III, Greater Noida
+                        </p>
+                    </div>
+                </div>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact us</h3>
-				<div class="widget-body">
-					<p>203131<br>
-						<a href="mailto:#">careergo@gmail.com</a><br>
-						<br>
-						Plot No.32-34, Knowledge Park III, Greater Noida
-					</p>	
-				</div>
-			</div>
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Follow me</h3>
+                    <div class="widget-body">
+                        <p class="follow-me-icons">
+                            <a href=""><i class="fa fa-twitter fa-2"></i></a>
+                            <a href=""><i class="fa fa-dribbble fa-2"></i></a>
+                            <a href=""><i class="fa fa-github fa-2"></i></a>
+                            <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                        </p>
+                    </div>
+                </div>
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">A little about us</h3>
+                    <div class="widget-body">
+                        <p>Career go provide a platform in which student itself decide what he or she want to do. It give you the best options list of colleges and their ranking, so student can select their college by their own interest. It's vital for a
+                            personal to find out the way to manage ones career management skills; because it has been stated that career could be a lifelong objective, a career should never come to a halt and student should know what things or course
+                            excites and directly search his or her dream college.</p>
 
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Plot No.32-34, Knowledge Park III, Greater Noida </p>
-				</div>
-			</div>
+                    </div>
+                </div>
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; 2021<br> 
-						
-				</div>
-			</div>
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Contact us</h3>
+                    <div class="widget-body">
+                        <p>203131<br>
+                            <a href="mailto:#">careergo@gmail.com</a><br>
+                            <br> Plot No.32-34, Knowledge Park III, Greater Noida
+                        </p>
+                    </div>
+                </div>
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+            </div>
+            <!-- /row of widgets -->
+        </div>
+    </footer>
+
+    <footer id="underfooter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p>Plot No.32-34, Knowledge Park III, Greater Noida </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p class="text-right">
+                            Copyright &copy; 2021<br>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row of widgets -->
+        </div>
+    </footer>
 
 
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="assets/js/template.js"></script>
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/template.js"></script>
 </body>
+
 </html>
